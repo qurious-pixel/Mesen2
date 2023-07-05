@@ -1,9 +1,9 @@
 #!/bin/bash
 
 export PUBLISHFLAGS="-r linux-x64 --no-self-contained false -p:PublishSingleFile=true -p:PublishReadyToRun=true"
-make -j$(nproc) -O clang LTO=true STATICLINK=true SYSTEM_LIBEVDEV=false
+make -j$(nproc) -O LTO=true STATICLINK=true SYSTEM_LIBEVDEV=false
 
-curl -SL https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage -O appimagetool
+curl -SL https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage -o appimagetool
 
 mkdir -p AppDir/usr/bin
 cp bin/linux-x64/Release/linux-x64/publish/Mesen AppDir/usr/bin
