@@ -60,7 +60,7 @@ jobs:
       #    path: bin/linux-x64/Release/linux-x64/publish/Mesen
       - name: Build Mesen (AppImage)
         run: |
-          pupnet Mesen --new desktop --new meta
+          pupnet Mesen --new desktop meta
           pupnet -y --runtime linux-x64 --kind appimage -o Mesen.AppImage
       #- name: Upload Mesen (AppImage)
       #  uses: actions/upload-artifact@v3
