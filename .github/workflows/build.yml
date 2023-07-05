@@ -52,8 +52,7 @@ jobs:
       # forcing colours makes the log a little nicer to read.
       - name: Build Mesen
         run: |
-          dotnet publish -r linux-x64 -c Release -p:Version=2.0.0 --self-contained true -p:DebugType=None -p:DebugSymbols=false
-          #make -j$(nproc) -O ${{ matrix.use_gcc }} LTO=true STATICLINK=true SYSTEM_LIBEVDEV=false
+          make -j$(nproc) -O ${{ matrix.use_gcc }} LTO=true STATICLINK=true SYSTEM_LIBEVDEV=false
       - name: Build Mesen (AppImage)
         run: |
           
