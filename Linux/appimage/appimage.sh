@@ -16,4 +16,4 @@ mkdir -p AppDir/usr/share/icons && cp ./AppDir/Mesen.png ./AppDir/usr/share/icon
 mkdir -p AppDir/usr/share/icons/hicolor/48x48/apps && cp ./AppDir/Mesen.png ./AppDir/usr/share/icons/hicolor/48x48/apps
 
 chmod a+x appimagetool
-./appimagetool AppDir/
+./appimagetool AppDir/ Mesen.AppImage
