@@ -53,9 +53,9 @@ jobs:
       - name: Build Mesen (AppImage)
         run: |
           chmod +x Linux/appimage/appimage.sh && Linux/appimage/appimage.sh
-      #- name: Upload Mesen
-      #  uses: actions/upload-artifact@v3
-      #  with:
-      #    name: Mesen (Linux - ${{ matrix.os }} - ${{ matrix.compiler }})
-      #    path: bin/linux-x64/Release/linux-x64/publish/Mesen
+      - name: Upload Mesen
+        uses: actions/upload-artifact@v3
+        with:
+          name: Mesen (Linux - AppImage)
+          path: Mesen.AppImage
 
