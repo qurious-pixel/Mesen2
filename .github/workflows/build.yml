@@ -60,11 +60,17 @@ jobs:
       #    path: bin/linux-x64/Release/linux-x64/publish/Mesen
       - name: Build Mesen (AppImage)
         run: |
+          pupnet -h
+          pupnet -h conf
           pupnet Mesen --new all --verbose
-          pupnet -y --runtime linux-x64 --kind appimage -o Mesen.AppImage
+          #pupnet -y --runtime linux-x64 --kind appimage -o Mesen.AppImage
       #- name: Upload Mesen (AppImage)
       #  uses: actions/upload-artifact@v3
       #  with:
       #    name: Mesen (Linux x64 - AppImage)
           # TO-ADD: path
-  
+      - name: Upload Mesen (AppImage)
+        uses: actions/upload-artifact@v3
+        with:
+          name: Mesen (Linux x64 - AppImage)
+          path: Mesen.pupnet.conf
