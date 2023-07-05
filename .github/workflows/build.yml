@@ -88,6 +88,8 @@ jobs:
           pupnet Mesen --new desktop
           pupnet Mesen --new meta
           pupnet -y --runtime linux-x64 --kind appimage -o Mesen.AppImage
+        env:
+          PUBLISHFLAGS: -r $(MESENPLATFORM) --no-self-contained false -p:PublishSingleFile=true -p:PublishReadyToRun=true
       - name: Upload Mesen (AppImage)
         uses: actions/upload-artifact@v3
         with:
