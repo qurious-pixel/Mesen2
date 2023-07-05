@@ -8,6 +8,7 @@ curl -SL https://github.com/AppImage/AppImageKit/releases/download/continuous/ap
 mkdir -p AppDir/usr/bin
 cp bin/linux-x64/Release/linux-x64/publish/Mesen AppDir/usr/bin
 chmod +x AppDir/usr/bin
+ln -sr AppDir/usr/bin/Mesen AppDir/AppRun
 
 cp Linux/appimage/Mesen.48x48.png AppDir/Mesen.png
 cp Linux/appimage/Mesen.desktop AppDir/Mesen.desktop
