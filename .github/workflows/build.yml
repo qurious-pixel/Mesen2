@@ -15,7 +15,7 @@ jobs:
         compiler: [gcc, clang]
         os: [ubuntu-22.04, ubuntu-20.04]
         exclude:
-          # This currently fails to build.
+          ## This currently fails to build.
           - os: ubuntu-20.04
             compiler: gcc
         include:
