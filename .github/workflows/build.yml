@@ -57,12 +57,7 @@ jobs:
           path: bin/linux-x64/Release/linux-x64/publish/Mesen
 
   appimage:
-    strategy:
-      matrix:
-        compiler: [clang]
-        os: [ubuntu-20.04]
-      fail-fast: false
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout repo
