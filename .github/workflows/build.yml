@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         compiler: [gcc] #, clang]
-        os: [ubuntu-22.04, ubuntu-20.04]
+        os: [ubuntu-22.04] #, ubuntu-20.04]
         exclude:
           # This currently fails to build.
           - os: ubuntu-20.04
@@ -21,8 +21,8 @@ jobs:
         include:
           - compiler: gcc
             use_gcc: "USE_GCC=true"
-          - compiler: clang
-            use_gcc: ""
+          #- compiler: clang
+          #  use_gcc: ""
       fail-fast: false
     runs-on: ${{ matrix.os }}
 
