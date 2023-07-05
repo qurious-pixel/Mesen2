@@ -12,7 +12,7 @@ jobs:
   linux:
     strategy:
       matrix:
-        compiler: [gcc] #, clang]
+        compiler: [gcc, clang]
         os: [ubuntu-22.04] #, ubuntu-20.04]
         exclude:
           # This currently fails to build.
