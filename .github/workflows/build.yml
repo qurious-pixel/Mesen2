@@ -59,12 +59,9 @@ jobs:
           name: Mesen (Linux - ${{ matrix.os }} - ${{ matrix.compiler }})
           path: bin/linux-x64/Release/linux-x64/publish/Mesen
       - name: Build Mesen (AppImage)
-        run: pupnet --runtime linux-x64 --kind appimage
-      - name: Upload Mesen
-        uses: actions/upload-artifact@v3
-        with:
-          name: Mesen (Linux - ${{ matrix.os }} - ${{ matrix.compiler }})
-          path: bin/linux-x64/Release/linux-x64/publish/Mesen
+        run: |
+          pupnet Mesen --new all --verbose
+          pupnet --runtime linux-x64 --kind appimage
       #- name: Upload Mesen (AppImage)
       #  uses: actions/upload-artifact@v3
       #  with:
